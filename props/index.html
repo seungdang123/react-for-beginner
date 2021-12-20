@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div id="root"></div>
+    </body>
+    <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        function Btn({ forWhat, big }) {
+            return (
+                <button style={{
+                    margin : "10px",
+                    backgroundColor: "tomato",
+                    color: "white",
+                    padding: "10px 20px",
+                    border: 0,
+                    borderRadius: 10,
+                    fontSize: big ? 50 : 25,
+                }}>{forWhat}</button>
+            )
+        }
+
+
+        const App = () => {
+            return (
+                <div>
+                    <Btn forWhat="Save Changes" big="bigFont"/>
+                    <Btn forWhat="Continue"/>
+                </div>
+            );
+        };
+
+        const root = document.getElementById("root");
+        ReactDOM.render(<App />, root);
+    </script>
+</html>
