@@ -6,12 +6,18 @@
     </body>
     <script>
         let counter = 0
+
+        // Find btn and span.
         const button = document.getElementById("btn");
         const span = document.querySelector("span");
+
+        // Write function and Rerender new data.
         function handleCick() {
             counter = counter + 1
             span.innerText = `Total clicks: ${counter}`;
         }
+
+        // Add Eventlistener.
         button.addEventListener("click", handleCick);
     </script>
 </html>
