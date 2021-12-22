@@ -31,7 +31,7 @@ function App() {
   }, [counter]);
 
   useEffect(() => {
-      console.log("I run when 'keyword' & 'counter' change.");
+      console.log("I run when 'keyword' | 'counter' change.");
   }, [keyword, counter]);
 
   return (
