@@ -1,12 +1,11 @@
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 30px;
 }
 
 body {
-    margin: 15px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -26,6 +25,7 @@ select {
 }
 
 hr {
+    margin: 30px 0;
     border: 1px dotted white;
 }
 

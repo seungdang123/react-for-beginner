@@ -14,7 +14,6 @@ function App() {
     setCryptocurrency(event.target.value);
     setDollar(1);
     setName(event.target.options[event.target.selectedIndex].text);
-    console.log(event);
   };
 
   const handleInput = (event) => {
@@ -54,7 +53,7 @@ function App() {
       <div>
           <h2 className={styles.choice}>{(name === "" ? name : "You choose", name)}</h2>
           <div className={styles.input_container}>
-            <input type="number" value={dollar} onChange={handleInput} placeholder="Dollar" if/><span style={{fontSize:"20px"}}>$</span>
+            <input type="number" value={dollar} onChange={handleInput} placeholder="Dollar"/><span style={{fontSize:"20px"}}>$</span>
           </div>
             <h2 className={styles.result}>= {dollar/cryptocurrency} {(cryptocurrency === 1 ? "$" :  name)}</h2>
       </div>
