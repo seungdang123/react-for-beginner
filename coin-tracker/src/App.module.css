@@ -1,0 +1,20 @@
+.container {
+    max-width: 900px;
+    border: 2px dotted rgb(248, 188, 35);
+    padding: 50px;
+}
+
+.title {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.choice {
+    font-size: 30px;
+    color: rgb(248, 188, 35);
+    margin-bottom: 30px;
+}
+
+.result {
+    width: 500px;
+}
