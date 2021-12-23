@@ -2,5 +2,5 @@
 
 ## Make a "Dollar to coin" converter with coinpaprika api in React.
 
-![image](src/demo.png)
+<img src="src/demo.png" width="470px" height="400px" alt="Select"></img>
 
