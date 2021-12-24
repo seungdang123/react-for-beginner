@@ -1,8 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import styles from "../css/Detail.module.css";
+
 function Detail() {
-    const[trailer, setTrailer] = useState("");
+    const[background, setBackground] = useState("");
+    const[title, setTitle] = useState("");
 
     const {id} = useParams();
     
@@ -10,7 +13,9 @@ function Detail() {
         const json = await (
             await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
         ).json();
-        setTrailer(json.data.movie.yt_trailer_code);
+        console.log(json);
+        setBackground(json.data.movie.background_image_original);
+        setTitle(json.data.movie.title);
     };
 
     useEffect(() => {
@@ -18,7 +23,19 @@ function Detail() {
     },[]);
 
     return (
-        <iframe width="600" height="600" src={`https://www.youtube.com/embed/${trailer}`} frameBorder="0" allowFullScreen></iframe>
+        <html>
+            <body style={{
+                backgroundImage: `url(${background})`,
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: "cover",
+                width: '100vw',
+                height: '100vh'
+            }}>
+                <h1 className={styles.title}>{title}</h1>
+    
+            </body>
+        </html>
     )
 }
 
